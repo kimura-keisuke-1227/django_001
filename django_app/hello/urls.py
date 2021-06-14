@@ -6,9 +6,9 @@ Created on Mon Jun 14 00:40:07 2021
 @author: owner
 """
 
-from django.conf.urls import url
-from .views import HelloView
+from django.urls import path
+from . import views
 
 urlpatterns = [
-        url('',HelloView.as_view(),name="index"),
+        path('',views.index,name="index"),
     ]
