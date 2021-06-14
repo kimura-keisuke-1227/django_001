@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1>{{title}}</h1>
-    <p>{{msg|safe}}</p>
+    <p>{{message|safe}}</p>
     <form action="{% url 'index' %}" method="post">
       {% csrf_token %} {{form}}
       <input type="submit" value="click" />
