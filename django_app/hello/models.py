@@ -9,5 +9,5 @@ class Friend(models.Model):
 
     def __str__(self):
         return '<Friend:id=' + str(self.id) + ", " + \
-                self.name + '(' + self.age + ')>'
+                self.name + '(' + str(self.age) + ')>'
 # Create your models here.
