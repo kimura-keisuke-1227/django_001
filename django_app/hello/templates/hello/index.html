@@ -14,11 +14,9 @@
   </head>
   <body>
     <h1>{{title}}</h1>
-    <p>{{msg}}</p>
-    <form action="{% url 'form' %}" method="post">
-      {% csrf_token %}
-      <label for="msg">message</label>
-      <input type="text" name="msg" id="msg" />
+    <p>{{msg|safe}}</p>
+    <form action="{% url 'index' %}" method="post">
+      {% csrf_token %} {{form}}
       <input type="submit" value="click" />
     </form>
   </body>
