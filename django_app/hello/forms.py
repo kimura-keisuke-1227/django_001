@@ -9,6 +9,7 @@ Created on Mon Jun 14 09:05:55 2021
 from django import forms
 
 class HelloForm(forms.Form):
-    name = forms.CharField(label='name')
-    mail = forms.CharField(label='mail')
-    age = forms.IntegerField(label='age')
+    check = forms.BooleanField(label="CheckBox" , required=False)
+    #name = forms.CharField(label='name')
+    #mail = forms.CharField(label='mail')
+    #age = forms.IntegerField(label='age')
