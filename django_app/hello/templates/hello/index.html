@@ -28,7 +28,11 @@
       <tr>
         <td>{{item.id}}</td>
         <td>{{item.name}}</td>
-        <td>{% if item.gender == False %}male{% endif %}</td>
+        {% if item.gender == False %}
+        <td>male</td>
+        {% endif %} {% if item.gender == True %}
+        <td>female</td>
+        {% endif %}
         <td>{{item.mail}}</td>
         <td>{{item.age}}</td>
         <td>{{item.birthday}}</td>
