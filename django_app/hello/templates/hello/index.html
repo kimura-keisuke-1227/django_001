@@ -28,12 +28,18 @@
       <tr>
         <td>{{item.id}}</td>
         <td>{{item.name}}</td>
-        <td>{% if item.gender == False %}male{% endif %}</td>
+        <td>
+          {% if item.gender == False %}male{% endif %} {% if item.gender == True
+          %}female{% endif %}
+        </td>
         <td>{{item.mail}}</td>
         <td>{{item.age}}</td>
         <td>{{item.birthday}}</td>
       </tr>
-      {% endfor %}
+
+      <tr>
+        {% endfor %}
+      </tr>
     </table>
   </body>
 </html>
