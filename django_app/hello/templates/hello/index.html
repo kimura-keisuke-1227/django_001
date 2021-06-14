@@ -15,6 +15,11 @@
   <body>
     <h1>{{title}}</h1>
     <p>{{msg}}</p>
-    <a href="{% url goto %}">{{goto}}</a>
+    <form action="{% url 'form' %}" method="post">
+      {% csrf_token %}
+      <label for="msg">message</label>
+      <input type="text" name="msg" id="msg" />
+      <input type="submit" value="click" />
+    </form>
   </body>
 </html>
