@@ -11,6 +11,9 @@ from django import forms
 class HelloForm(forms.Form):
     id = forms.IntegerField(label='ID')
     #check = forms.BooleanField(label="CheckBox" , required=False)
-    #name = forms.CharField(label='name')
-    #mail = forms.CharField(label='mail')
-    #age = forms.IntegerField(label='age')
+    #
+    name = forms.CharField(label='name')
+    mail = forms.CharField(label='mail')
+    gender = forms.BooleanField(label='gender',required=False)
+    age = forms.IntegerField(label='age')
+    birthday = forms.DateTimeField(label='birth')
